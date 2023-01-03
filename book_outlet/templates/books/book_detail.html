@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+    {{ title}}
+{% endblock page_title %}
+
+{% block css_files %}
+{% endblock css_files %}
+
+{% block content %}
+    <h1> Title: {{ title }} </h1>
+    <h2> Author: {{ author }} </h2>
+    Rating of: {{ rating }}
+    {% if is_bestseller %}
+        and is a bestseller.
+    {% else %}
+        but isn't a bestseller.
+    {% endif %}
+{% endblock content %}

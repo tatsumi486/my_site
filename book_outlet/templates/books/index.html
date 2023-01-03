@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+    Welcome
+{% endblock page_title %}
+
+{% block css_files %}
+{% endblock css_files %}
+
+{% block content %}
+    <section id ="welcome"> </section>
+    <section>
+        <h1> Books</h1>
+        <ul>
+            {% for b in books %}
+            <li><a href="{{ b.get_absolute_url }}">{{ b.title}}</a> ({{b.rating}}) </li>
+            {% endfor %}
+        </ul>
+        
+    </section>
+    <hr>
+    <section>
+        Total Number of books: {{total}} <br>
+        Average Rating: {{avg_rating.rating__avg}}
+    </section>
+{% endblock content %}
