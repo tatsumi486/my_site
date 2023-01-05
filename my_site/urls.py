@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('book/', include('book_outlet.urls')),
-    path('reviews/', include('reviews.urls'))
+    path('reviews/', include('reviews.urls')),
+    path("profiles/", include("profiles.urls")),
 ]
