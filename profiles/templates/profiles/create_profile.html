@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{% static "profiles/styles.css" %}">
 </head>
 <body>
-  <form action ="/profiles/" method="OST" enctype="multipart/form-data">
+  <form action="/profiles/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
     <button>Upload!</button>
