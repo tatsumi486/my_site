@@ -22,7 +22,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=80)
     excerpt = models.CharField(max_length=80)
     date = models.DateField(auto_now=True)
-    img_name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="posts", null=True)
     slug = models.SlugField(unique=True, db_index=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name="posts")
